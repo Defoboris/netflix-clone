@@ -2,6 +2,7 @@ import { Component, inject, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { FaIconLibrary } from '@fortawesome/angular-fontawesome';
 import { NavbarComponent } from "./navbar/navbar.component";
+import {fontAwesomeIcons} from './shared/font-awesome-icons';
 
 @Component({
   selector: 'app-root',
@@ -18,6 +19,6 @@ export class AppComponent implements OnInit {
   }
 
   private initFontAwesome() {
-    this.faIconLibrary
+    this.faIconLibrary.addIcons(...fontAwesomeIcons);
   }
 }
