@@ -1,10 +1,13 @@
 import {Component, effect, inject, OnInit} from '@angular/core';
-import {TmdbService} from '../service/tmdb.service';
-import {Genre} from '../service/model/genre.model';
+import {TmdbService} from '../../service/tmdb.service';
+import {Genre} from '../../service/model/genre.model';
+import {MovieListComponent} from './movie-list/movie-list.component';
 
 @Component({
   selector: 'app-movie-selector',
-  imports: [],
+  imports: [
+    MovieListComponent
+  ],
   templateUrl: './movie-selector.component.html',
   styleUrl: './movie-selector.component.scss'
 })
